@@ -170,18 +170,18 @@ public class MainActivity extends AppCompatActivity {
     ///////////////////////////////////////////
     // BT Send data methods
     public void btn_HeightSave(View view){
-//        // Get slider value
-//        slider = findViewById(R.id.height_slider);
-//        slider_float = slider.getValue();
-//        slider_value = (int)Math.round(slider_float);
-//        //Edit to add ability to parse data on MCU
-//        slider_string = Integer.toString(slider_value);
-//        byte[] bytes = slider_string.getBytes(Charset.defaultCharset());
-        TextInputLayout textInputLayout = findViewById(R.id.height_Number);
-        String tmp = textInputLayout.getEditText().getText().toString();
-        byte[] bytes = tmp.getBytes(Charset.defaultCharset());
+        // Get slider value
+        slider = findViewById(R.id.height_slider);
+        slider_float = slider.getValue();
+        slider_value = (int)Math.round(slider_float);
+        //Edit to add ability to parse data on MCU
+        slider_string = Integer.toString(slider_value);
+        byte[] bytes = slider_string.getBytes(Charset.defaultCharset());
+//        TextInputLayout textInputLayout = findViewById(R.id.height_Number);
+//        String tmp = textInputLayout.getEditText().getText().toString();
+//        byte[] bytes = tmp.getBytes(Charset.defaultCharset());
         myBTConnection.write(bytes);
-        Log.d(TAG, "btn_HeightSave: BT Message Sent: " + tmp);
+        Log.d(TAG, "btn_HeightSave: BT Message Sent: " + slider_string);
     }
 
     // Broadcast Receivers
