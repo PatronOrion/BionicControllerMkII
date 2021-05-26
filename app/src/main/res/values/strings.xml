@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Bionic Controller MkII</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Prosthetic Controller</string>
+    <string name="nav_header_subtitle">EWU Engineering Capstone 2021</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Height</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="btn_BTOnOff">BT On/Off</string>
+    <string name="btn_BTDiscovery">Enable Discovery</string>
+    <string name="btn_BTDiscover">Discover</string>
+    <string name="height_heightText">Height</string>
+
+    <string name="text_edit">Text Editted</string>
+    <string name="slider_start">Slider Start</string>
+    <string name="slider_end">Slider End</string>
+    <string name="slider_changed">Slider value changed</string>
+    <string name="BT_ableConnect">Ready to connect to Bluetooth</string>
+</resources>
