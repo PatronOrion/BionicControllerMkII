@@ -67,4 +67,29 @@
         app:layout_constraintTop_toBottomOf="@+id/height_slider"
         app:layout_constraintVertical_bias="0.975" />
 
+    <Button
+        android:id="@+id/btn_BootRelease"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/str_btn_BootRelease"
+        android:onClick="btn_BootRelease"
+        app:layout_constraintEnd_toStartOf="@+id/btn_BootReturn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height_slider" />
+
+    <Button
+        android:id="@+id/btn_BootReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/str_btn_BootReturn"
+        android:onClick="btn_BootReturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_BootRelease"
+        app:layout_constraintTop_toBottomOf="@+id/height_slider" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

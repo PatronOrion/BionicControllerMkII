@@ -32,6 +32,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -65,13 +66,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+//            }
+//        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -180,8 +181,24 @@ public class MainActivity extends AppCompatActivity {
 //        TextInputLayout textInputLayout = findViewById(R.id.height_Number);
 //        String tmp = textInputLayout.getEditText().getText().toString();
 //        byte[] bytes = tmp.getBytes(Charset.defaultCharset());
-        myBTConnection.write(bytes);
-        Log.d(TAG, "btn_HeightSave: BT Message Sent: " + slider_string);
+        try {
+            myBTConnection.write(bytes);
+            toastCall(R.string.str_BTSave, 0);
+            Log.d(TAG, "btn_HeightSave: BT Message Sent: " + slider_string);
+        } catch (Exception e){
+            Log.e(TAG, "btn_HeightSave: Failed to write to BT socket: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void btn_BootRelease(View view){
+        toastCall(R.string.str_BootRelease, 0);
+        Log.d(TAG, "btn_HBootRelease: Boot released. ");
+    }
+
+    public void btn_BootReturn(View view){
+        toastCall(R.string.str_BootReturn, 0);
+        Log.d(TAG, "btn_BootReturn: Boot returned.");
     }
 
     // Broadcast Receivers

@@ -20,4 +20,9 @@
     <string name="slider_end">Slider End</string>
     <string name="slider_changed">Slider value changed</string>
     <string name="BT_ableConnect">Ready to connect to Bluetooth</string>
+    <string name="str_btn_BootRelease">Release Foot</string>
+    <string name="str_btn_BootReturn">Return Foot</string>
+    <string name="str_BootRelease">Boot released.</string>
+    <string name="str_BootReturn">Boot returned.</string>
+    <string name="str_BTSave">Settings sent.</string>
 </resources>
